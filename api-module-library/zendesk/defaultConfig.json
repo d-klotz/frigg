@@ -1,0 +1,9 @@
+{
+    "name": "zendesk",
+    "label": "Zendesk",
+    "productUrl": "https://zendesk.com",
+    "apiDocs": "https://developer.zendesk.com",
+    "logoUrl": "https://friggframework.org/assets/img/zendesk.jpeg",
+    "categories": ["Support"],
+    "description": "Clyde"
+}
