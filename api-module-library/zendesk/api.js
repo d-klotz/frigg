@@ -15,7 +15,7 @@ class Api extends OAuth2Requester {
         this.redirect_uri = `${process.env.REDIRECT_URI}/zendesk?account=${this.subdomain}`;
 
         this.URLs = {
-            organization: '/api/v2/organization',
+            organization: '/api/v2/organizations',
         };
 
         this.authorizationUri = `${this.baseUrl}/oauth/authorizations/new?response_type=code&client_id=${this.client_id}&client_secret${this.client_secret}&redirect_uri=${this.redirect_uri}&scope=read`;
