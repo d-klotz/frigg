@@ -224,8 +224,16 @@ class Manager extends ModuleManager {
         const code = get(params.data, 'code');
         this.api.setSubdomain(this.getParam(params.data, 'subdomain'));
 
-        await this.api.getTokenFromCode(code);
-        await this.api.authTest();
+        const response = await this.api.getTokenFromCode(code);
+        const session = await this.api.authTest();
+
+        if (session.user) {
+            this.userId = session.user.id;
+        }
+
+        if (response.access_token) {
+            this.access_token = response.access_token;
+        }
 
         await this.findOrCreateCredential({
             client_id: this.api.client_id,
