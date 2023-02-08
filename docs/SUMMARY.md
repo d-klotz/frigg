@@ -4,7 +4,6 @@
 
 ## 👩💻 Getting Started <a href="#develop" id="develop"></a>
 
-* [Overview](develop/overview.md)
 * [Tutorials](develop/tutorials/README.md)
   * [Quick Start Tutorial](develop/tutorials/quick-start/README.md)
     * [Create Frigg App](develop/tutorials/quick-start/create-frigg-app.md)
@@ -14,6 +13,7 @@
     * [Building your first integration](develop/tutorials/quick-start/building-your-first-integration.md)
     * [Testing the Integration](develop/tutorials/quick-start/testing-the-integration.md)
     * [Next Steps](develop/tutorials/quick-start/next-steps.md)
+  * [Make Your Own Api Module](develop/tutorials/make-your-own-api-module.md)
 * [Framework Development Guide](develop/framework-development-guide.md)
 * [API Module Development Guide](develop/api-module-development-guide/README.md)
   * [Introduction](develop/api-module-development-guide/introduction.md)
