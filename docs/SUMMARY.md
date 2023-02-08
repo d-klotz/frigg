@@ -2,7 +2,7 @@
 
 * [🥳 Introduction to Frigg](README.md)
 
-## 👩💻 Developing Integrations with Frigg <a href="#develop" id="develop"></a>
+## 👩💻 👩💻 Developing Integrations with Frigg <a href="#develop" id="develop"></a>
 
 * [Overview](develop/overview.md)
 * [Tutorials](develop/tutorials/README.md)

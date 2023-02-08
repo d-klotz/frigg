@@ -37,11 +37,9 @@ Read more about Frigg on [Wikipedia](https://en.wikipedia.org/wiki/Frigg).&#x20;
 
 ## Frigg Explained to Developers&#x20;
 
-Simply put- Frigg is what you would build into your product if you had unlimited resources and time, with the added benefit of being Open Source, where it's not just you but a community of developers collaborating to solve the same core set of problems over and over again. Something you could never do internally.
+Frigg is an opinionated integration framework built with modern software development teams in mind. The aim of Frigg is to have you up and running with a flexible set of tools to help rapidly add integrations to your software.
 
-The Frigg Framework is an opinionated integration framework built with modern software development teams in mind. The aim of the framework is to have you up and running out of the box with a flexible set of tools to help rapidly add integrations to your software that your end users can manage individually without any intervention.&#x20;
-
-The framework handles integration listing, authentication, and configuration "out of the box," built on a scalable serverless architecture with a growing library of prebuilt API Modules to greatly reduce time to wow. Along with the core "out of the box" features, the framework contains primitives to help address and flex to any use case.&#x20;
+Frigg handles integration authentication, and configuration "out of the box," built on a scalable serverless architecture with a growing library of prebuilt API Modules. Along with the core features, Frigg contains flexible modules that can adapt to your company's use case.&#x20;
 
 ## Navigating the Docs
 
