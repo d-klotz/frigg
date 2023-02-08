@@ -6,13 +6,13 @@ When you work on code in this repo, make sure you are using Node 14.x and Npm 7.
 
 There are different ways to switch versions of Node/NPM, here is one:
 
-1.  Make sure n is installed
+1. Make sure n is installed
 
-- The easiest way is `npm install -g n`.
-- You may prefer to install n with Homebrew: `brew install n`
-- More info: https://github.com/tj/n#installation
+* The easiest way is `npm install -g n`.
+* You may prefer to install n with Homebrew: `brew install n`
+* More info: https://github.com/tj/n#installation
 
-2.  Run `npm run use:engine` in the root directory. This is a shortcut for `n install 14 && npm install -g npm@7.20.2`. However, when you use `npm run use:engine`, the version numbers are automatically read from the root package.json's "engines" key.
+1. Run `npm run use:engine` in the root directory. This is a shortcut for `n install 14 && npm install -g npm@7.20.2`. However, when you use `npm run use:engine`, the version numbers are automatically read from the root package.json's "engines" key.
 
 ## Linking the Workspaces
 
@@ -31,7 +31,7 @@ cd ../project-b
 npm link @friggframework/logs
 ```
 
-Now, the local copy of the logs package is linked into project B's node_modules directory. Any local edits to the logs package will be immeidately available to your local copy of project B
+Now, the local copy of the logs package is linked into project B's node\_modules directory. Any local edits to the logs package will be immeidately available to your local copy of project B
 
 ## Workspaces
 
@@ -51,21 +51,19 @@ A good rule of thumb is to name the package based on what it provides. This can 
 
 Be sure each package has:
 
-- a README.md (which is displayed on npmjs.com).
-- a LICENSE.md file (make sure the attribution and date are correct)
-- a package.json file with repository, description, correct license, and other important fields filled in
+* a README.md (which is displayed on npmjs.com).
+* a LICENSE.md file (make sure the attribution and date are correct)
+* a package.json file with repository, description, correct license, and other important fields filled in
 
 ## Semver
 
-When fixing a bug or making small tweaks use `npm version patch`
-When adding a feature that doesn't alter the public interface to existing features, use `npm version minor`
-When making a change that alters the public interface use `npm version major`.
+When fixing a bug or making small tweaks use `npm version patch` When adding a feature that doesn't alter the public interface to existing features, use `npm version minor` When making a change that alters the public interface use `npm version major`.
 
 ## Publishing
 
 After merging or rebasing a branch into main:
 
-```sh
+```
 git checkout main
 npm test --workspace=logs
 npm version patch --workspace=logs # or major or minor
@@ -77,7 +75,7 @@ npm publish --workspace=logs --access public
 
 72 hours are given to unpublish a version without complications: https://docs.npmjs.com/policies/unpublish
 
-```sh
+```
 cd logs
 npm unpublish @friggframework/logs@0.0.1
 cd ..
