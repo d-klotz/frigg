@@ -35,23 +35,29 @@ Read more about Frigg on [Wikipedia](https://en.wikipedia.org/wiki/Frigg).&#x20;
 
 </details>
 
-## What is Frigg? Why would you want to use it?
-
-### The problem Frigg solves
+## The Problem Frigg Solves
 
 As developers, we are constantly asked to add an integration to a software product. This means going to a third party service like google maps or salesforce and integrating those features into your business application.&#x20;
 
 This can be very time consuming and we are all doing the same thing. We made Frigg to provide a way for developers to collaborate on this problem with an open source library that attempts to handle third party integrations in a simple and repeatable way.
 
+**TLDR**; have all developers work on the same generic 3rd party integrations and interact with those integrations in a similar way.&#x20;
 
+**Benefits**: Faster time to market, a community of developers on the same problem, less headaches and doc reading!&#x20;
 
-##
+## How Does Frigg Work?&#x20;
 
-## Frigg Explained to Developers&#x20;
+Frigg is built on a scalable serverless architecture with a growing library of prebuilt API Modules that you can use. The core features include authentication and configuration of integrations.
 
-Frigg is an opinionated integration framework built with modern software development teams in mind. The aim of Frigg is to have you up and running with a flexible set of tools to help rapidly add integrations to your software.
+Along with the core features, Frigg contains flexible modules that can adapt to your company's use case in the event that you need to work with an API in a custom way.
 
-Frigg handles integration authentication, and configuration "out of the box," built on a scalable serverless architecture with a growing library of prebuilt API Modules. Along with the core features, Frigg contains flexible modules that can adapt to your company's use case.&#x20;
+## General Architecture
+
+A Frigg Application is predominantly a backend microservice, with an optional frontend for configuration.
+
+In the backend, Frigg is based on the serverless.com framework. This key piece of technology and the underlying compute/architecture under the hood provides a number of advantages:
+
+You can learn more about serverless [here](https://www.serverless.com/framework/docs)
 
 ## Navigating the Docs
 
@@ -90,24 +96,3 @@ These docs should be your go-to resource for all things Frigg related. In genera
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
-
-{% hint style="info" %}
-<details>
-
-<summary>A Note on Basic Architecture</summary>
-
-A Frigg Application is predominantly a backend microservice, with an optional frontend. Most Frigg adopters already have an existing frontend UI built using a framework of their choice, or will bake integration UX into their product's core code. Frigg ships with a simple library of components to get you started quickly. See more details about frontend options here.
-
-In the backend, Frigg is based on the serverless.com framework. This key piece of technology and the underlying compute/architecture under the hood provides a number of advantages:
-
-* Infrastructure-as-Code- The need to manually configure resources on the host provider is greatly reduced
-* Deployable to your favorite host- AWS, GCP, Azure, any a list of many more are available
-* Horizontal Scalability
-* Pay as you go
-
-</details>
-{% endhint %}
-
-## Contributing Developers
-
-See [CONTRIBUTING.md](contributing/contributing/) for details about getting started as a Frigg contributor.
