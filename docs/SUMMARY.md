@@ -9,7 +9,7 @@
     * [Create Frigg App](develop/tutorials/quick-start/create-frigg-app.md)
     * [Configuration](develop/tutorials/quick-start/configuration.md)
     * [Exploring the App](develop/tutorials/quick-start/exploring-the-app.md)
-    * [Connecting to the Database](develop/tutorials/quick-start/connecting-to-the-database.md)
+    * [Exploring the Database](develop/tutorials/quick-start/connecting-to-the-database.md)
     * [Installing an API Module](develop/tutorials/quick-start/installing-an-api-module.md)
   * [Building your first integration](develop/tutorials/quick-start/building-your-first-integration.md)
     * [Testing the Integration](develop/tutorials/quick-start/testing-the-integration.md)

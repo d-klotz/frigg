@@ -12,6 +12,10 @@ We provide a very lightweight/basic user login flow and dashboard. Go ahead and 
 
 ![Frigg-login-page](https://user-images.githubusercontent.com/3011407/210785998-457ab95f-7b7c-4f02-892b-57477c75708a.png)
 
+Once you log in successfully, you will see a page that shows all installed integrations.
+
+<figure><img src="../../../.gitbook/assets/screencapture-demo-friggframework-org-integrations-2022.png" alt=""><figcaption></figcaption></figure>
+
 ## Backend Overview
 
 The backend is built around the serverless.com framework and written in [node.js](https://nodejs.org/en/). When you run `npm start`, it runs the command to use the `serverless-offline` node module which allows us to simulate a serverless environment locally and not in the cloud.
@@ -21,6 +25,12 @@ All data is handled with [mongodb](https://www.mongodb.com/) and [mongoose](http
 Critical to note is that this supports basic functionality (API => function invocation, or schedule => function invocation), it does not support all events that you may be relying on to power your integrations. In other words, you can run Authentication and Configuration, but the entirety of your Frigg applications' backend will not run using this command.&#x20;
 
 For that, see "Running Frigg Locally."
+
+### How it Works
+
+As you might have noticed, you use both a [serverless](https://aws.amazon.com/serverless/) instance and a client side react app to access the Frigg API modules. The flow looks like this:
+
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-04-11 at 10.52.07 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Reading the Code
 
@@ -45,13 +55,3 @@ These are the mongoose model definitions.
 ### ./src/routers
 
 This is how you set up routes with serverless that are referenced in `serverless.yml`.
-
-
-
-![](../../../.gitbook/assets/screencapture-demo-friggframework-org-integrations-2022.png)
-
-### How it works
-
-As you might have noticed, you use both a [serverless](https://aws.amazon.com/serverless/) instance and a client side react app to access the Frigg API modules. The flow looks like this:
-
-![](<../../../.gitbook/assets/Screen Shot 2022-04-11 at 10.52.07 AM.png>)
