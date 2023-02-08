@@ -2,7 +2,7 @@
 
 * [🥳 Introduction to Frigg](README.md)
 
-## 👩💻 👩💻 Developing Integrations with Frigg <a href="#develop" id="develop"></a>
+## 👩💻 Getting Started <a href="#develop" id="develop"></a>
 
 * [Overview](develop/overview.md)
 * [Tutorials](develop/tutorials/README.md)
@@ -26,7 +26,7 @@
 * [Integration Development Guide](develop/integration-development-guide.md)
 * [Authentication](develop/authentication.md)
 
-## 📖 Frigg Reference <a href="#reference" id="reference"></a>
+## 📖 Api Reference <a href="#reference" id="reference"></a>
 
 * [Overview](reference/introduction.md)
 * [Core Concepts](reference/core-concepts.md)

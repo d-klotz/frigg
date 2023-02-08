@@ -35,6 +35,18 @@ Read more about Frigg on [Wikipedia](https://en.wikipedia.org/wiki/Frigg).&#x20;
 
 </details>
 
+## What is Frigg? Why would you want to use it?
+
+### The problem Frigg solves
+
+As developers, we are constantly asked to add an integration to a software product. This means going to a third party service like google maps or salesforce and integrating those features into your business application.&#x20;
+
+This can be very time consuming and we are all doing the same thing. We made Frigg to provide a way for developers to collaborate on this problem with an open source library that attempts to handle third party integrations in a simple and repeatable way.
+
+
+
+##
+
 ## Frigg Explained to Developers&#x20;
 
 Frigg is an opinionated integration framework built with modern software development teams in mind. The aim of Frigg is to have you up and running with a flexible set of tools to help rapidly add integrations to your software.
@@ -43,45 +55,41 @@ Frigg handles integration authentication, and configuration "out of the box," bu
 
 ## Navigating the Docs
 
-We've got a lot to unpack! These docs should be your go-to resource for all things Frigg related. Over time, there will doubtless be other properties and places (courses?) where you'll get more deep dives into topics and example implementations (and we expect example implementations contributed by the community?), but for now, this is the place.
-
-In general, there are five main areas of the docs
+These docs should be your go-to resource for all things Frigg related. In general, there are five main areas of the docs:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-^ Here you'll find Quick Start tutorials and examples, along with deeper dive documentation on how to develop integrations with Frigg.
+* Quick Start tutorials and examples
+* How to develop integrations with Frigg.
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-^ This is the main area where you'll find documentation around all Frigg concepts
+* Documentation around all Frigg concepts
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-^ Here's where we lay out how to get involved in contributing to the Frigg core project. And oh boy are we glad to have you!
+* How to get involved in contributing to the Frigg core project
+* We would be so glad to have you!
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-^ Ah, the ever-expanding documentation section! At some point when we've reached critical mass (read: 1,000+ API Modules), "we're going to need a bigger boat". But for now, basic docs around any specific module live here.
+* Documentation around specific third party modules
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-^ Yup, we all need support sometimes. When it comes to Frigg-related support, you've got a few options. Hit us up in those places! Or in person. Novel concept these days.
-
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
-
-^ This is probably both the most exciting and most daunting part of the whole enterprise. So much possibility! We're using an external tool for now, so we're just linking out to there and giving a high level short-medium-long term road map on which you can anchor your expectations. Or if you want to sponsor pieces of the roadmap, you can greatly change its shape.
 
 {% hint style="info" %}
 <details>
@@ -99,8 +107,6 @@ In the backend, Frigg is based on the serverless.com framework. This key piece o
 
 </details>
 {% endhint %}
-
-
 
 ## Contributing Developers
 
