@@ -1,4 +1,4 @@
-# 🥳 Introduction to Frigg
+# 🥳 Overview
 
 <details>
 
@@ -49,7 +49,7 @@ This can be very time consuming and we are all doing the same thing. We made Fri
 
 Frigg is built on a scalable serverless.com architecture (You can learn more about serverless [here](https://www.serverless.com/framework/docs))  with a growing library of prebuilt API Modules that you can use out of the box. The core features include authentication and configuration of these 3rd party services.
 
-Along with the core features, Frigg contains flexible modules that can adapt to your company's use case in the event that you need to work with an API in a custom way.
+Along with the core features, Frigg contains flexible modules that can adapt to your company's use cases in the event that you need to work with an API in a custom way.
 
 A Frigg Application is predominantly a backend service, with an optional frontend for configuration.
 
