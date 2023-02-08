@@ -13,7 +13,7 @@ npm i frigg create-frigg-app
 npx create-frigg-app [my-app-integrations]
 ```
 
-This creates a new folder with a frigg application inside. Let's navigate to that folder and run our frigg application.
+### Create Your Frigg Application
 
 ```
 cd [my-app-integrations]
