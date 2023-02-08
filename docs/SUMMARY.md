@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🥳 Introduction to Frigg](README.md)
+* [🥳 Overview](README.md)
 
 ## 👩💻 Getting Started <a href="#develop" id="develop"></a>
 
