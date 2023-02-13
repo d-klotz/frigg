@@ -37,3 +37,7 @@ These are the mongoose model definitions.
 #### ./src/routers <a href="#.-src-routers" id=".-src-routers"></a>
 
 This is how you set up routes with serverless that are referenced in `serverless.yml`.
+
+## Using the Frigg Backend on its Own&#x20;
+
+In many cases you may want to create a Frigg application where you do not need the frontend. This application is explained in this section of the docs: [Use the Frigg Backend Only](<exploring-the-backend (1).md#using-the-frigg-backend-on-its-own>)

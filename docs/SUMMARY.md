@@ -17,6 +17,7 @@
     * [Testing the Integration](develop/tutorials/quick-start/testing-the-integration.md)
     * [Next Steps](develop/tutorials/quick-start/next-steps.md)
   * [Make Your Own Api Module](develop/tutorials/make-your-own-api-module.md)
+  * [Use the Frigg Backend Only](develop/tutorials/use-the-frigg-backend-only.md)
 * [Framework Development Guide](develop/framework-development-guide.md)
 * [API Module Development Guide](develop/api-module-development-guide/README.md)
   * [Introduction](develop/api-module-development-guide/introduction.md)

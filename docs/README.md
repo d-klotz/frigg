@@ -37,7 +37,7 @@ Read more about Frigg on [Wikipedia](https://en.wikipedia.org/wiki/Frigg).&#x20;
 
 ## The Problem Frigg Solves
 
-As developers, we are constantly asked to add an integration to a software product. These are commonly self-service integrations allowing customers to connect their existing tools to an external software product. This means going to a third party service like google calendar or salesforce and integrating those features into your business application.&#x20;
+As developers, we are constantly asked to add an integration to a software product. This means going to a third party service like google maps or salesforce and integrating those features into your business application.&#x20;
 
 This can be very time consuming and we are all doing the same thing. We made Frigg to provide a way for developers to collaborate on this problem with an open source library that attempts to handle third party integrations in a simple and repeatable way.
 
