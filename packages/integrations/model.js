@@ -12,8 +12,15 @@ const schema = new mongoose.Schema(
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
-            required: true,
+            required: () => !this.users.length,
         },
+        users: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+                required: () => !this.user,
+            },
+        ],
         status: {
             type: String,
             enum: [

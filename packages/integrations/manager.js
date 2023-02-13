@@ -36,12 +36,13 @@ class IntegrationManager extends Delegate {
         }
 
         if (!userId) {
-            userId = integration.user._id.toString();
-        } else if (userId !== integration.user._id.toString()) {
+            userId = integration.user._id.toString() || null;
+        } else if (
+            userId !== integration.user._id.toString() ||
+            !integration.users.includes(userId)
+        ) {
             throw new Error(
-                `Integration ${
-                    params.integrationId
-                } does not belong to User ${userId}, ${integration.user.id.toString()}`
+                `Integration ${params.integrationId} does not belong to User ${userId}}`
             );
         }
 
