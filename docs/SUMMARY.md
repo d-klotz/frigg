@@ -12,7 +12,6 @@
     * [Exploring the Backend](<develop/tutorials/quick-start/exploring-the-backend (1).md>)
     * [Exploring the Database](develop/tutorials/quick-start/connecting-to-the-database.md)
     * [Installing an API Module](develop/tutorials/quick-start/installing-an-api-module.md)
-    * [Exploring the Backend](develop/tutorials/quick-start/exploring-the-backend.md)
   * [Building your first integration](develop/tutorials/quick-start/building-your-first-integration.md)
     * [Testing the Integration](develop/tutorials/quick-start/testing-the-integration.md)
     * [Next Steps](develop/tutorials/quick-start/next-steps.md)
