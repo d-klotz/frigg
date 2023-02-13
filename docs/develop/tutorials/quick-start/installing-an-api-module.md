@@ -8,7 +8,7 @@ In the above Github repo, you can see all of the api modules that we have worked
 
 ## How Do I Use an Existing Api Module?
 
-For the following examples, we will use Hubspot as an example integration we want to install.
+For the following examples, we will use [Hubspot](https://developers.hubspot.com/docs/api/overview) as an example integration we want to install.
 
 ### Let's Create a New Frigg Application
 
@@ -19,9 +19,13 @@ cd my-application/backend
 npm install @friggframework/api-module-hubspot
 ```
 
-Now this does nothing except create a Frigg application and add a package to our `node_modules` folder. To use this api module in your code, you will have to perform the following steps.
+{% hint style="info" %}
+Don't forget to configure your database connection as described in [this section](../../../api-module-library/module-list/hubspot/configuration.md)
+{% endhint %}
 
-#### Default display override by adding to ConfigManager
+Now this does not enable Hubspot out of the box but instead creates a Frigg application and adds a package to our `node_modules` folder. To use this api module in your code, you will have to perform the following steps.
+
+#### 1. Default display override by adding to ConfigManager
 
 If you are using the front end of `create-frigg-app`, you will not be able to view the application for configuration until you change the code.
 
