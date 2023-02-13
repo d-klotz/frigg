@@ -12,13 +12,13 @@ Everything in this list will be worked on eventually to make the onboarding flow
 
 When you first launch a new create-frigg-app, if things are not set up properly, you will see the following message in the front end when clicking on "Log in" or "Create Account" from the login page [http://localhost:3000/](http://localhost:3000/)
 
-![](<../../.gitbook/assets/Screen Shot 2023-02-13 at 9.49.26 AM.png>)
+![](<../.gitbook/assets/Screen Shot 2023-02-13 at 9.49.26 AM.png>)
 
 This is happening because your database is not configured properly.
 
 Check your configuration file here: `my-create-frigg-app/backend/src/configs/dev.json`
 
-In this file, you need to set up mongo properly as mentioned in the [Configuration](../../api-module-library/module-list/rollworks/configuration.md) section of these docs.
+In this file, you need to set up mongo properly as mentioned in the [Configuration](../api-module-library/module-list/rollworks/configuration.md) section of these docs.
 
 You can debug to see if this is working by running these commands in terminal.
 
@@ -34,10 +34,14 @@ show databases;
 
 The second reason that this will happen is that your configuration for the application is not correct. You will see this if you check the front end's developer tools and see this console error:
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-02-13 at 9.57.02 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2023-02-13 at 9.57.02 AM.png" alt=""><figcaption></figcaption></figure>
 
 This is because you need to make your own `.env` file in `/frontend` based on `.env.example` Navigate to the root of your project and run:
 
 ```
 cp frontend/.env.example frontend/.env
 ```
+
+## Login Failed: Duplicate User
+
+{% embed url="https://github.com/friggframework/create-frigg-app/issues/30" %}

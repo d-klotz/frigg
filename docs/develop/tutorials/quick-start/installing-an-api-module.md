@@ -15,7 +15,9 @@ For the following examples, we will use [Hubspot](https://developers.hubspot.com
 ```
 npm i -g frigg create-frigg-app
 npx create-frigg-app my-application
-cd my-application/backend
+cd my-application
+cp frontend/.env.example frontend/.env
+cd backend
 npm install @friggframework/api-module-hubspot
 ```
 

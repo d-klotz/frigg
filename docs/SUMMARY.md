@@ -15,7 +15,6 @@
   * [Building Your Own API Module](develop/tutorials/quick-start/building-your-first-integration.md)
     * [Testing the Integration](develop/tutorials/quick-start/testing-the-integration.md)
     * [Next Steps](develop/tutorials/quick-start/next-steps.md)
-  * [Debugging](develop/tutorials/debugging.md)
   * [Use the Frigg Backend Only](develop/tutorials/use-the-frigg-backend-only.md)
 * [Framework Development Guide](develop/framework-development-guide.md)
 * [API Module Development Guide](develop/api-module-development-guide/README.md)
@@ -28,6 +27,7 @@
     * [Extending](develop/api-module-development-guide/deployment/extending.md)
 * [Integration Development Guide](develop/integration-development-guide.md)
 * [Authentication](develop/authentication.md)
+* [Debugging](develop/debugging.md)
 
 ## 📖 Api Reference <a href="#reference" id="reference"></a>
 
