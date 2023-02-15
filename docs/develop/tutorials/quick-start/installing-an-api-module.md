@@ -31,7 +31,12 @@ Now this does not enable Hubspot out of the box but instead creates a Frigg appl
 
 If you are using the front end of `create-frigg-app`, you will not be able to view the application for configuration until you change the code. You can see how to do this [here](https://github.com/friggframework/TutorialApplication#how-to-see-a-new-api-module-hubspot-in-the-front-end).
 
-2. Configure hubspot in the front end
-3. Test your module
-4. Customize your module
-5. Access your module from the backend only
+#### 2. Configure the front end to Enable HubSpot
+
+Once Hubspot is set up in the code properly, you can click the "Connect" button to enable the Hubspot API Module.
+
+
+
+2. Test your module
+3. Customize your module
+4. Access your module from the backend only
