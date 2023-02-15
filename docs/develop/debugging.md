@@ -50,3 +50,6 @@ cp frontend/.env.example frontend/.env
 TLDR: You will have to delete your duplicate users and tokens from your DB manually. We are working on a better way to solve this. Then simply restart your application in terminal  :thumbsup:
 {% endhint %}
 
+## Login Failed: Mongo Atlas Connection
+
+If you have cleaned up your database, you can also run into an error where your IP address changes and in MongoDB Atlas, you can no longer work with your database. Follow [this tutorial](https://www.mongodb.com/docs/atlas/government/tutorial/allow-ip/) to add your current IP address. NOTE: Your internet service provider can change your IP address without telling you so you may have to do this every so often. If you want, you can set up mongo locally to connect to. Try [this tutorial](https://www.mongodb.com/docs/manual/introduction/) to set up mongo locally.
