@@ -33,10 +33,9 @@ If you are using the front end of `create-frigg-app`, you will not be able to vi
 
 #### 2. Configure the front end to Enable HubSpot
 
-Once Hubspot is set up in the code properly, you can click the "Connect" button to enable the Hubspot API Module.
+Once Hubspot is set up in the code properly, you can click the "Connect" button to enable the Hubspot API Module. This will do what....?
 
+#### 3. Add a Custom Route to an existing API Module
 
+#### 4. Access Your Custom Route from the Backend Only
 
-2. Test your module
-3. Customize your module
-4. Access your module from the backend only
