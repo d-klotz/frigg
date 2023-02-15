@@ -45,3 +45,8 @@ cp frontend/.env.example frontend/.env
 ## Login Failed: Duplicate User
 
 {% embed url="https://github.com/friggframework/create-frigg-app/issues/30" %}
+
+{% hint style="info" %}
+TLDR: You will have to delete your duplicate users and tokens from your DB manually. We are working on a better way to solve this. Then simply restart your application in terminal  :thumbsup:
+{% endhint %}
+
