@@ -24,7 +24,7 @@ This can be found in two places right now. `.env` and `src/configs`
 
 #### ./src/handlers <a href="#.-src-handlers" id=".-src-handlers"></a>
 
-These are services that enable managers
+Broadly speaking, handlers are the entry point for any serverless function. Every deploy tool and cloud provider is slightly different, but the gist is that they all package up the function code and each function has one signature/entry point. Check out [the serverless docs](https://www.serverless.com/framework/docs/providers/aws/guide/functions) for more information.&#x20;
 
 #### ./src/managers <a href="#.-src-managers" id=".-src-managers"></a>
 
