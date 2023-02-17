@@ -24,5 +24,7 @@ Once a user authenticates to a third party service, we store the oauth credentia
 
 ## Tokens
 
-Instead of the standard [oauth 2.0 flow](https://oauth.net/2/), some services provide a token for authentication. This is where these tokens are stored and linked to a user.
+The Token model is not as important as our other models but we will discuss it here to provide as much information as possible. This was a more or less custom implementation of an auth token for frontend use. It's a session token that's an encoded json object (so, stores information).&#x20;
+
+You can see how the static methods on the token model are relevant to effectively create a session/auth token flow. The code can be seen [here](https://github.com/friggframework/create-frigg-app/blob/main/packages/cfa-template/template/backend/src/models/Token.js).
 
