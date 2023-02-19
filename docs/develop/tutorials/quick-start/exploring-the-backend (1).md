@@ -30,6 +30,15 @@ Broadly speaking, handlers are the entry point for any serverless function. Ever
 
 This is where most of the business logic will be stored and all data records will be created.
 
+The "managers" that we care about are in two buckets:
+
+1. &#x20;Entity Managers, or "classes whose sole responsibility is to handle communication with a specific App/API, including storing and refreshing any credentials in the connected DB"&#x20;
+2. Integration Managers, or "classes whose sole responsibility is to facilitate the lifecycle and ongoing logic of a given Integration type and specific record."
+
+
+
+
+
 #### ./src/models <a href="#.-src-models" id=".-src-models"></a>
 
 These are the mongoose model definitions.
