@@ -150,6 +150,58 @@
         "research",
         "review"
       ]
+    },
+    {
+      "login": "queuetue",
+      "name": "Scott Russell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4491?v=4",
+      "profile": "https://queuetue.com/",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "joncodo",
+      "name": "Jonathan O'Donnell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3011407?v=4",
+      "profile": "https://github.com/joncodo",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "li-sherry",
+      "name": "li-sherry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117298948?v=4",
+      "profile": "https://github.com/li-sherry",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "vedantagrawall",
+      "name": "vedantagrawall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52647115?v=4",
+      "profile": "https://github.com/vedantagrawall",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "codesee-maps[bot]",
+      "name": "codesee-maps[bot]",
+      "avatar_url": "https://avatars.githubusercontent.com/in/122769?v=4",
+      "profile": "https://github.com/apps/codesee-maps",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7

@@ -1,5 +1,6 @@
 const { OAuth2Requester } = require('@friggframework/module-plugin');
 const { get } = require('@friggframework/assertions');
+const { FetchError } = require('@friggframework/errors');
 
 class Api extends OAuth2Requester {
     constructor(params) {
@@ -11,7 +12,11 @@ class Api extends OAuth2Requester {
         // this.client_id = get(params, 'client_id');
         // this.client_secret = get(params, 'client_secret');
         this.scope = process.env.SLACK_SCOPE;
-        this.redirect_uri = `${process.env.REDIRECT_URI}/slack`;
+        this.redirect_uri = get(
+            params,
+            'redirect_uri',
+            `${process.env.REDIRECT_URI}/slack`
+        );
         this.access_token = get(params, 'access_token', null);
 
         this.URLs = {
@@ -19,6 +24,17 @@ class Api extends OAuth2Requester {
             authorize: 'https://slack.com/oauth/v2/authorize',
             access_token: '/oauth.v2.access',
             authTest: '/auth.test',
+            listTeams: '/auth.teams.list',
+
+            // Channels or Conversations
+            getChannel: '/conversations.info',
+            listChannels: '/conversations.list',
+            createChannel: '/conversations.create',
+            updateChannel: '/conversations.update',
+            closeChannel: '/conversations.close',
+            archiveChannel: '/conversations.archive',
+            inviteUsersToChannel: '/conversations.invite',
+            renameChannel: '/conversations.rename',
 
             // Chats
             getMessagePermalink: '/chat.getPermalink',
@@ -41,36 +57,96 @@ class Api extends OAuth2Requester {
             shareRemoteFile: '/files.remote.share', // Shares a remote file
             revokeFilePublicURL: '/files.revokePublicURL', // Revokes public/external sharing access for a file
             sharedFilePublicURL: '/files.sharedPublicURL', // Enables a file for public/external sharing.
+
+            // Users
+            lookupUserByEmail: '/users.lookupByEmail',
+            getUserProfileById: '/users.profile.get',
+            getUserById: '/users.info',
+
+            // Views
+            openView: '/views.open',
+            publishView: '/views.publish',
+            updateView: '/views.update',
+            pushView: '/views.push',
         };
 
-        this.authorizationUri = `${this.URLs.authorize}?state=FRIGGSLACKAPP&client_id=${this.client_id}&scope=${this.scope}&redirect_uri=${this.redirect_uri}`;
+        this.tokenUri = this.baseUrl + this.URLs.access_token;
+    }
+
+    async _request(url, options, i = 0) {
+        let encodedUrl = encodeURI(url);
+        if (options.query) {
+            let queryBuild = '?';
+            for (const key in options.query) {
+                queryBuild += `${encodeURIComponent(key)}=${encodeURIComponent(
+                    options.query[key]
+                )}&`;
+            }
+            encodedUrl += queryBuild.slice(0, -1);
+        }
+
+        options.headers = await this.addAuthHeaders(options.headers);
+
+        const response = await this.fetch(encodedUrl, options);
+        const parsedResponse = await this.parsedBody(response);
+        const { status } = response;
+        const { ok, error } = parsedResponse;
+        console.log(parsedResponse);
+
+        // If the status is retriable and there are back off requests left, retry the request
+        if ((status === 429 || status >= 500) && i < this.backOff.length) {
+            const delay = this.backOff[i] * 1000;
+            await new Promise((resolve) => setTimeout(resolve, delay));
+            return this._request(url, options, i + 1);
+        } else if (
+            parsedResponse.error === 'invalid_auth' ||
+            parsedResponse.error === 'auth_expired' ||
+            parsedResponse.error === 'token_expired'
+        ) {
+            if (!this.isRefreshable || this.refreshCount > 0) {
+                await this.notify(this.DLGT_INVALID_AUTH);
+            } else {
+                this.refreshCount++;
+                await this.refreshAuth();
+                return this._request(url, options, i + 1); // Retries
+            }
+        }
+
+        // If the error wasn't retried, throw.
+        if (!ok) {
+            throw await FetchError.create({
+                resource: encodedUrl,
+                init: options,
+                response,
+                body: parsedResponse,
+            });
+        }
+
+        return parsedResponse;
     }
 
     async addAuthHeaders(headers) {
         if (this.access_token) {
             headers.Authorization = `Bearer ${this.access_token}`;
         }
+        if (!headers['Content-Type'])
+            headers['Content-Type'] = 'application/json';
+        if (!headers['Accept']) headers['Accept'] = 'application/json';
+
         return headers;
     }
 
     async getAuthUri() {
-        return this.authorizationUri;
+        const authUri = encodeURI(
+            `${this.URLs.authorize}?state=&client_id=${this.client_id}&scope=${this.scope}&redirect_uri=${this.redirect_uri}`
+        );
+        return authUri;
     }
-
-    async getTokenFromCode(code) {
+    async listTeams() {
         const options = {
-            url: this.baseUrl + this.URLs.access_token,
-            body: {
-                client_id: this.client_id,
-                client_secret: this.client_secret,
-                code,
-            },
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
+            url: this.baseUrl + this.URLs.listTeams,
         };
-        const response = await this._post(options);
+        const response = await this._get(options);
         return response;
     }
 
@@ -78,12 +154,44 @@ class Api extends OAuth2Requester {
         const options = {
             url: this.baseUrl + this.URLs.authTest,
             body: null,
+        };
+        const response = await this._post(options);
+        return response;
+    }
+
+    async lookupUserByEmail(email) {
+        const options = {
+            url: this.baseUrl + this.URLs.lookupUserByEmail + `?email=${email}`,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                Accept: 'application/json',
+            },
+        };
+        const response = await this._get(options);
+        return response;
+    }
+    async getUserProfileById(userId) {
+        const options = {
+            url:
+                this.baseUrl + this.URLs.getUserProfileById + `?user=${userId}`,
             headers: {
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
             },
         };
-        const response = await this._post(options);
+        const response = await this._get(options);
+        return response;
+    }
+
+    async getUserById(userId) {
+        const options = {
+            url: this.baseUrl + this.URLs.getUserById + `?user=${userId}`,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+        };
+        const response = await this._get(options);
         return response;
     }
 
@@ -121,10 +229,6 @@ class Api extends OAuth2Requester {
         const options = {
             url: this.baseUrl + this.URLs.postMessage,
             body,
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
         };
         const response = await this._post(options);
         return response;
@@ -146,10 +250,6 @@ class Api extends OAuth2Requester {
         const options = {
             url: this.baseUrl + this.URLs.updateMessage,
             body,
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
         };
         const response = await this._post(options);
         return response;
@@ -163,10 +263,6 @@ class Api extends OAuth2Requester {
         const options = {
             url: this.baseUrl + this.URLs.deleteMessage,
             body,
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
         };
         const response = await this._post(options);
         return response;
@@ -219,10 +315,6 @@ class Api extends OAuth2Requester {
         const options = {
             url: this.baseUrl + this.URLs.uploadFile,
             body,
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
         };
         const response = await this._post(options);
         return response;
@@ -234,10 +326,6 @@ class Api extends OAuth2Requester {
         const options = {
             url: this.baseUrl + this.URLs.deleteFile,
             body,
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
         };
         const response = await this._post(options);
         return response;
@@ -325,6 +413,71 @@ class Api extends OAuth2Requester {
             query,
         };
         const response = await this._get(options);
+        return response;
+    }
+
+    // Args:
+    // name: string, required
+    // is_private: boolean, optional
+    async createChannel(body) {
+        const options = {
+            url: this.baseUrl + this.URLs.createChannel,
+            body,
+        };
+        const response = await this._post(options);
+        return response;
+    }
+
+    // Args:
+    // channel: string, required
+    // users: array, required
+    async inviteUsersToChannel(body) {
+        const options = {
+            url: this.baseUrl + this.URLs.inviteUsersToChannel,
+            body,
+        };
+        const response = await this._post(options);
+        return response;
+    }
+
+    // Args:
+    // Need args from Slack
+    async openView(body) {
+        const options = {
+            url: this.baseUrl + this.URLs.openView,
+            body,
+        };
+        const response = await this._post(options);
+        return response;
+    }
+
+    // Need args from Slack
+    async updateView(body) {
+        const options = {
+            url: this.baseUrl + this.URLs.updateView,
+            body,
+        };
+        const response = await this._post(options);
+        return response;
+    }
+
+    // Need args from Slack
+    async pushView(body) {
+        const options = {
+            url: this.baseUrl + this.URLs.pushView,
+            body,
+        };
+        const response = await this._post(options);
+        return response;
+    }
+
+    // Need args from Slack
+    async publishView(body) {
+        const options = {
+            url: this.baseUrl + this.URLs.publishView,
+            body,
+        };
+        const response = await this._post(options);
         return response;
     }
 }

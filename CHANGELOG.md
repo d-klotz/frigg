@@ -1,3 +1,612 @@
+# (Wed Feb 15 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.31`
+  - Switch to Upsert for Credential and Entity creation [#131](https://github.com/friggframework/frigg/pull/131) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Mon Feb 13 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.30`
+  - Fix bug [#130](https://github.com/friggframework/frigg/pull/130) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Mon Feb 13 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.29`
+  - Support as-user-workflow-schemas and connection info [#129](https://github.com/friggframework/frigg/pull/129) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-slack@0.1.24`
+  - Slack: Add User Lookup by ID [#128](https://github.com/friggframework/frigg/pull/128) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Sun Feb 12 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/database@1.0.11`
+  - StrictQuery issue resolution [#127](https://github.com/friggframework/frigg/pull/127) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.23`
+  - Quick hits, view endpoints [#126](https://github.com/friggframework/frigg/pull/126) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.22`, `@friggframework/module-plugin@1.0.23`
+  - Fixed a Slack bug via requester improvement [#125](https://github.com/friggframework/frigg/pull/125) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 08 2023)
+
+#### 🐛 Bug Fix
+
+- Install the CodeSee workflow. [#118](https://github.com/friggframework/frigg/pull/118) ([@codesee-maps[bot]](https://github.com/codesee-maps[bot]))
+- `@friggframework/errors@1.1.6`
+  - URLSearchParams (used in OAuth2 base) was not printing out bodies in … [#124](https://github.com/friggframework/frigg/pull/124) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 2
+
+- [@codesee-maps[bot]](https://github.com/codesee-maps[bot])
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Fri Feb 03 2023)
+
+#### 🐛 Bug Fix
+
+- Install the CodeSee workflow. [#118](https://github.com/friggframework/frigg/pull/118) ([@codesee-maps[bot]](https://github.com/codesee-maps[bot]))
+- `@friggframework/api-module-yotpo@0.0.15`
+  - Headers, man. Headers. We should work out where to put the default ty… [#122](https://github.com/friggframework/frigg/pull/122) ([@seanspeaks](https://github.com/seanspeaks))
+  - listProducts with query passed in [#119](https://github.com/friggframework/frigg/pull/119) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 2
+
+- [@codesee-maps[bot]](https://github.com/codesee-maps[bot])
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Thu Feb 02 2023)
+
+#### 🐛 Bug Fix
+
+- Install the CodeSee workflow. [#118](https://github.com/friggframework/frigg/pull/118) ([@codesee-maps[bot]](https://github.com/codesee-maps[bot]))
+- `@friggframework/api-module-yotpo@0.0.14`
+  - listProducts with query passed in [#119](https://github.com/friggframework/frigg/pull/119) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 2
+
+- [@codesee-maps[bot]](https://github.com/codesee-maps[bot])
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Thu Feb 02 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.21`
+  - More unit test reasons [#116](https://github.com/friggframework/frigg/pull/116) ([@seanspeaks](https://github.com/seanspeaks))
+  - this is why we unit test [#115](https://github.com/friggframework/frigg/pull/115) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 01 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.20`
+  - this is why we unit test [#115](https://github.com/friggframework/frigg/pull/115) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 01 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-fastspring-iq@0.8.23`, `@friggframework/api-module-hubspot@0.8.22`, `@friggframework/api-module-yotpo@0.0.13`
+  - Update the Credential [#111](https://github.com/friggframework/frigg/pull/111) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-yotpo@0.0.13`
+  - Double up on the base [#114](https://github.com/friggframework/frigg/pull/114) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 01 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.19`
+  - Channel management API Methods [#113](https://github.com/friggframework/frigg/pull/113) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Feb 01 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.27`
+  - minor bug fix in Ironclad get comments by Id endpoint [#112](https://github.com/friggframework/frigg/pull/112) (vedant@vedant.agrawal [@vedantagrawall](https://github.com/vedantagrawall))
+
+#### Authors: 2
+
+- [@vedantagrawall](https://github.com/vedantagrawall)
+- Vedant Agrawal (vedant@vedant.agrawal)
+
+---
+
+# (Tue Jan 31 2023)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: null[@vedantagrawall](https://github.com/vedantagrawall)
+
+:heart: null[@li-sherry](https://github.com/li-sherry)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.26`
+  - Vedantagrawall/ironclad comments endpoint [#110](https://github.com/friggframework/frigg/pull/110) (vedant@vedant.agrawal [@vedantagrawall](https://github.com/vedantagrawall))
+  - Merge branch 'vedantagrawal/additional-ironclad-endpoints' into AddSlackLookupUsersByEmail [#105](https://github.com/friggframework/frigg/pull/105) ([@li-sherry](https://github.com/li-sherry))
+  - adding workflow participants and get user endpoints [#105](https://github.com/friggframework/frigg/pull/105) (vedant@vedant.agrawal)
+- `@friggframework/api-module-slack@0.1.19`
+  - passing email as query param [#107](https://github.com/friggframework/frigg/pull/107) (vedant@vedant.agrawal)
+  - change to x-www-form-urlencoded [#107](https://github.com/friggframework/frigg/pull/107) ([@li-sherry](https://github.com/li-sherry))
+  - add lookupUsersByEmail [#106](https://github.com/friggframework/frigg/pull/106) ([@li-sherry](https://github.com/li-sherry))
+
+#### Authors: 3
+
+- [@li-sherry](https://github.com/li-sherry)
+- [@vedantagrawall](https://github.com/vedantagrawall)
+- Vedant Agrawal (vedant@vedant.agrawal)
+
+---
+
+# (Tue Jan 31 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@li-sherry](https://github.com/li-sherry), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.18`
+  - change to x-www-form-urlencoded [#107](https://github.com/friggframework/frigg/pull/107) ([@li-sherry](https://github.com/li-sherry) vedant@vedant.agrawal)
+  - add lookupUsersByEmail [#106](https://github.com/friggframework/frigg/pull/106) ([@li-sherry](https://github.com/li-sherry))
+- `@friggframework/api-module-ironclad@0.0.26`
+  - Merge branch 'vedantagrawal/additional-ironclad-endpoints' into AddSlackLookupUsersByEmail [#105](https://github.com/friggframework/frigg/pull/105) ([@li-sherry](https://github.com/li-sherry))
+  - adding workflow participants and get user endpoints [#105](https://github.com/friggframework/frigg/pull/105) (vedant@vedant.agrawal)
+
+#### Authors: 2
+
+- [@li-sherry](https://github.com/li-sherry)
+- Vedant Agrawal (vedant@vedant.agrawal)
+
+---
+
+# (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-yotpo@0.0.12`
+  - Updates/api module yotpo [#109](https://github.com/friggframework/frigg/pull/109) ([@seanspeaks](https://github.com/seanspeaks))
+  - Retrieving and setting Loyalty API credentials correctly. [#108](https://github.com/friggframework/frigg/pull/108) ([@seanspeaks](https://github.com/seanspeaks))
+  - Successfully authenticates into and stores credential info for Yotpo Loyalty API [#108](https://github.com/friggframework/frigg/pull/108) ([@seanspeaks](https://github.com/seanspeaks))
+  - WIP adding methods to API [#108](https://github.com/friggframework/frigg/pull/108) ([@seanspeaks](https://github.com/seanspeaks))
+  - WIP Updates: [#108](https://github.com/friggframework/frigg/pull/108) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-yotpo@0.0.12`, `@friggframework/test-environment@1.1.7`
+  - # mock-api.js Work in Progress [#108](https://github.com/friggframework/frigg/pull/108) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-yotpo@0.0.11`, `@friggframework/test-environment@1.1.6`
+  - Updates/api module yotpo [#108](https://github.com/friggframework/frigg/pull/108) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Tue Jan 31 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.24`, `@friggframework/api-module-slack@0.1.16`
+  - add lookupUsersByEmail [#106](https://github.com/friggframework/frigg/pull/106) (vedant@vedant.agrawal [@li-sherry](https://github.com/li-sherry))
+- `@friggframework/api-module-ironclad@0.0.24`
+  - Merge branch 'vedantagrawal/additional-ironclad-endpoints' into AddSlackLookupUsersByEmail [#105](https://github.com/friggframework/frigg/pull/105) ([@li-sherry](https://github.com/li-sherry))
+
+#### Authors: 2
+
+- [@li-sherry](https://github.com/li-sherry)
+- Vedant Agrawal (vedant@vedant.agrawal)
+
+---
+
+# (Tue Jan 24 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.15`
+  - .update is not a mongoose model method [#104](https://github.com/friggframework/frigg/pull/104) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Mon Jan 23 2023)
+
+#### 🐛 Bug Fix
+
+- Update package-lock for deploy [#100](https://github.com/friggframework/frigg/pull/100) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-yotpo@0.0.10`
+  - Api module library yotpo [#103](https://github.com/friggframework/frigg/pull/103) ([@seanspeaks](https://github.com/seanspeaks))
+  - Proper export [#99](https://github.com/friggframework/frigg/pull/99) ([@seanspeaks](https://github.com/seanspeaks))
+  - Yotpo updates to accomodate the multiple APIs that use different Auth patterns. [#98](https://github.com/friggframework/frigg/pull/98) ([@seanspeaks](https://github.com/seanspeaks))
+  - Breaking up apis into groupings. [#98](https://github.com/friggframework/frigg/pull/98) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-activecampaign@0.8.22`, `@friggframework/api-module-airwallex@0.8.21`, `@friggframework/api-module-attentive@0.8.22`, `@friggframework/api-module-clyde@0.8.23`, `@friggframework/api-module-connectwise@0.8.24`, `@friggframework/api-module-crossbeam@0.8.21`, `@friggframework/api-module-fastspring-iq@0.8.22`, `@friggframework/api-module-front@0.8.21`, `@friggframework/api-module-gorgias@0.8.21`, `@friggframework/api-module-hubspot@0.8.21`, `@friggframework/api-module-huggg@0.8.22`, `@friggframework/api-module-ironclad@0.0.24`, `@friggframework/api-module-marketo@0.8.22`, `@friggframework/api-module-monday@0.8.21`, `@friggframework/api-module-netx@0.8.21`, `@friggframework/api-module-outreach@0.8.21`, `@friggframework/api-module-personio@0.8.22`, `@friggframework/api-module-pipedrive@0.8.21`, `@friggframework/api-module-qbo@0.8.21`, `@friggframework/api-module-rev-io@0.8.21`, `@friggframework/api-module-rollworks@0.8.21`, `@friggframework/api-module-salesforce@0.8.27`, `@friggframework/api-module-salesloft@0.8.21`, `@friggframework/api-module-slack@0.1.15`, `@friggframework/api-module-terminus@0.8.21`, `@friggframework/api-module-yotpo@0.0.10`, `@friggframework/api-module-zoom@0.8.21`, `@friggframework/assertions@1.0.8`, `@friggframework/core@0.2.12`, `@friggframework/database@1.0.10`, `@friggframework/encrypt@1.1.6`, `@friggframework/errors@1.1.6`, `@friggframework/eslint-config@1.0.9`, `@friggframework/integrations@1.0.20`, `@friggframework/logs@1.0.9`, `@friggframework/module-plugin@1.0.22`, `@friggframework/prettier-config@1.0.7`, `@friggframework/test-environment@1.1.6`
+  - Merge remote-tracking branch 'origin/main' into api-module-library-yotpo [#98](https://github.com/friggframework/frigg/pull/98) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-yotpo@0.0.10`, `@friggframework/assertions@1.0.8`
+  - Still working through items [#98](https://github.com/friggframework/frigg/pull/98) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### ⚠️ Pushed to `main`
+
+- Add community channel for frigg release notifications ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Fri Jan 20 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@debbie-yu](https://github.com/debbie-yu), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.14`
+  - log error thrown from slack get token from code call [#101](https://github.com/friggframework/frigg/pull/101) ([@debbie-yu](https://github.com/debbie-yu))
+
+#### Authors: 1
+
+- [@debbie-yu](https://github.com/debbie-yu)
+
+---
+
+# (Thu Jan 19 2023)
+
+#### 🐛 Bug Fix
+
+- Update package-lock for deploy [#100](https://github.com/friggframework/frigg/pull/100) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-yotpo@0.0.9`
+  - Proper export [#99](https://github.com/friggframework/frigg/pull/99) ([@seanspeaks](https://github.com/seanspeaks))
+  - Api module library yotpo [#98](https://github.com/friggframework/frigg/pull/98) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Jan 18 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.23`, `@friggframework/api-module-slack@0.1.13`, `@friggframework/errors@1.1.5`
+  - Ironclad and slack updates [#96](https://github.com/friggframework/frigg/pull/96) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/module-plugin@1.0.21`
+  - Refresh Auth attempt only once, instead of potential for infinite loop [#95](https://github.com/friggframework/frigg/pull/95) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.12`
+  - Slack authUri [#94](https://github.com/friggframework/frigg/pull/94) ([@seanspeaks](https://github.com/seanspeaks))
+  - slack redirect URI [#93](https://github.com/friggframework/frigg/pull/93) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-slack@0.1.11`
+  - slack redirect URI [#93](https://github.com/friggframework/frigg/pull/93) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Thu Jan 12 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.22`, `@friggframework/api-module-slack@0.1.10`, `@friggframework/integrations@1.0.18`
+  - Slack, Ironclad, and "IntegrationManager" updates [#92](https://github.com/friggframework/frigg/pull/92) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Wed Jan 11 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-ironclad@0.0.21`, `@friggframework/module-plugin@1.0.20`
+  - Ironclad updates and sub type [#91](https://github.com/friggframework/frigg/pull/91) ([@JonathanEdMoore](https://github.com/JonathanEdMoore) [@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-ironclad@0.0.21`
+  - Passing Tests [#59](https://github.com/friggframework/frigg/pull/59) ([@JonathanEdMoore](https://github.com/JonathanEdMoore))
+  - Added params to listAllWorkflows [#59](https://github.com/friggframework/frigg/pull/59) ([@JonathanEdMoore](https://github.com/JonathanEdMoore))
+
+#### Authors: 2
+
+- Jonathan Moore ([@JonathanEdMoore](https://github.com/JonathanEdMoore))
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Tue Jan 10 2023)
+
+#### 🐛 Bug Fix
+
+- update docs related to configuration [#88](https://github.com/friggframework/frigg/pull/88) ([@joncodo](https://github.com/joncodo))
+- `@friggframework/assertions@1.0.7`
+  - strKey is not defined [#90](https://github.com/friggframework/frigg/pull/90) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 2
+
+- Jonathan O'Donnell ([@joncodo](https://github.com/joncodo))
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Mon Jan 09 2023)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+:heart: Tom Elliott ([@tomlefthook](https://github.com/tomlefthook))
+
+:heart: null[@cgenesoniSouthWorks](https://github.com/cgenesoniSouthWorks)
+
+:heart: Gregorio Martin ([@gregoriomartin](https://github.com/gregoriomartin))
+
+:heart: William P. Riley-Land ([@wprl](https://github.com/wprl))
+
+:heart: Scott Russell ([@queuetue](https://github.com/queuetue))
+
+#### 🐛 Bug Fix
+
+- GitBook: [#91] Change routes, too verbose ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#90] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#88] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#87] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#86] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#85] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#84] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#83] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#82] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#80] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#79] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#78] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#77] No subject ([@tomlefthook](https://github.com/tomlefthook))
+- Updated Contributors [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @ryanzarick as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @cbanister as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @TrevorKiefaber as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @cgenesoniSouthWorks as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @gregoriomartin as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @JonathanEdMoore as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @kad1001 as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @wprl as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @sheehantoufiq as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Add @tomlefthook as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Docs: Update @seanspeaks as a contributor [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+- Update README.md [#47](https://github.com/friggframework/frigg/pull/47) ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#75] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#74] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#73] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#72] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#71] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#70] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#69] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#67] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#66] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#65] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#64] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#63] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#61] No subject [#48](https://github.com/friggframework/frigg/pull/48) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#58] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#57] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#56] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#53] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#52] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#51] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#50] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#49] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#46] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#48] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#47] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#45] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#44] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#43] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#42] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#41] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#39] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#38] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#37] No subject [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#36] 4:12 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#35] 4:11 test [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#34] More Markdown testing [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#33] 7 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#32] 6 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#31] Image with link 5 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#30] Image with link attempt 4 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#29] Image with Link via markdown attempt #3 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#28] Image with Link (second attempt) [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#27] Remove Code Block 1 [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#26] Tom Button Test [#34](https://github.com/friggframework/frigg/pull/34) ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#21] No subject [#25](https://github.com/friggframework/frigg/pull/25) ([@seanspeaks](https://github.com/seanspeaks))
+- Refactor modules [#10](https://github.com/friggframework/frigg/pull/10) ([@wprl](https://github.com/wprl) [@seanspeaks](https://github.com/seanspeaks) [@queuetue](https://github.com/queuetue))
+- Remove breaking options [#8](https://github.com/friggframework/frigg/pull/8) ([@seanspeaks](https://github.com/seanspeaks))
+- Add CICD. [#5](https://github.com/friggframework/frigg/pull/5) ([@wprl](https://github.com/wprl))
+- Refactor/more [#4](https://github.com/friggframework/frigg/pull/4) ([@wprl](https://github.com/wprl))
+- Break out core modules more. [#3](https://github.com/friggframework/frigg/pull/3) ([@wprl](https://github.com/wprl))
+- Improve CONTRIBUTING formatting. [#2](https://github.com/friggframework/frigg/pull/2) ([@wprl](https://github.com/wprl))
+- chore: release [#2](https://github.com/friggframework/frigg/pull/2) ([@wprl](https://github.com/wprl))
+- Copy over files. [#2](https://github.com/friggframework/frigg/pull/2) ([@wprl](https://github.com/wprl))
+- Clean slate. [#2](https://github.com/friggframework/frigg/pull/2) ([@wprl](https://github.com/wprl))
+- `@friggframework/api-module-activecampaign@0.8.18`, `@friggframework/api-module-airwallex@0.8.17`, `@friggframework/api-module-attentive@0.8.18`, `@friggframework/api-module-clyde@0.8.19`, `@friggframework/api-module-connectwise@0.8.20`, `@friggframework/api-module-crossbeam@0.8.17`, `@friggframework/api-module-fastspring-iq@0.8.18`, `@friggframework/api-module-front@0.8.17`, `@friggframework/api-module-gorgias@0.8.17`, `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-huggg@0.8.18`, `@friggframework/api-module-marketo@0.8.18`, `@friggframework/api-module-monday@0.8.17`, `@friggframework/api-module-netx@0.8.17`, `@friggframework/api-module-outreach@0.8.17`, `@friggframework/api-module-personio@0.8.18`, `@friggframework/api-module-pipedrive@0.8.17`, `@friggframework/api-module-qbo@0.8.17`, `@friggframework/api-module-rev-io@0.8.17`, `@friggframework/api-module-rollworks@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`, `@friggframework/api-module-salesloft@0.8.17`, `@friggframework/api-module-terminus@0.8.17`, `@friggframework/api-module-zoom@0.8.17`, `@friggframework/assertions@1.0.6`, `@friggframework/core@0.2.10`, `@friggframework/database@1.0.9`, `@friggframework/encrypt@1.1.5`, `@friggframework/errors@1.1.4`, `@friggframework/eslint-config@1.0.8`, `@friggframework/integrations@1.0.15`, `@friggframework/logs@1.0.8`, `@friggframework/module-plugin@1.0.18`, `@friggframework/prettier-config@1.0.6`, `@friggframework/test-environment@1.1.5`
+  - Merge remote-tracking branch 'origin/main' into gitbook-updates [#48](https://github.com/friggframework/frigg/pull/48) ([@seanspeaks](https://github.com/seanspeaks))
+  - Add READMEs for all packages and api-modules [#20](https://github.com/friggframework/frigg/pull/20) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-connectwise@0.8.20`, `@friggframework/api-module-salesforce@0.8.23`, `@friggframework/integrations@1.0.15`, `@friggframework/module-plugin@1.0.18`
+  - Updates to managers [#24](https://github.com/friggframework/frigg/pull/24) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-zoom@0.8.17`, `@friggframework/assertions@1.0.6`
+  - replace local references [#22](https://github.com/friggframework/frigg/pull/22) ([@cgenesoniSouthWorks](https://github.com/cgenesoniSouthWorks) [@gregoriomartin](https://github.com/gregoriomartin))
+- `@friggframework/api-module-activecampaign@0.8.18`, `@friggframework/api-module-airwallex@0.8.17`, `@friggframework/api-module-attentive@0.8.18`, `@friggframework/api-module-clyde@0.8.19`, `@friggframework/api-module-connectwise@0.8.20`, `@friggframework/api-module-crossbeam@0.8.17`, `@friggframework/api-module-fastspring-iq@0.8.18`, `@friggframework/api-module-front@0.8.17`, `@friggframework/api-module-gorgias@0.8.17`, `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-huggg@0.8.18`, `@friggframework/api-module-marketo@0.8.18`, `@friggframework/api-module-monday@0.8.17`, `@friggframework/api-module-netx@0.8.17`, `@friggframework/api-module-outreach@0.8.17`, `@friggframework/api-module-personio@0.8.18`, `@friggframework/api-module-pipedrive@0.8.17`, `@friggframework/api-module-qbo@0.8.17`, `@friggframework/api-module-rev-io@0.8.17`, `@friggframework/api-module-rollworks@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`, `@friggframework/api-module-salesloft@0.8.17`, `@friggframework/api-module-terminus@0.8.17`, `@friggframework/api-module-zoom@0.8.17`, `@friggframework/core@0.2.10`, `@friggframework/database@1.0.9`, `@friggframework/integrations@1.0.15`, `@friggframework/module-plugin@1.0.18`
+  - A lot of changes all rolled into one [#21](https://github.com/friggframework/frigg/pull/21) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-fastspring-iq@0.8.18`, `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`
+  - Continued refactor [#11](https://github.com/friggframework/frigg/pull/11) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@seanspeaks](https://github.com/seanspeaks))
+- Update README.md ([@tomlefthook](https://github.com/tomlefthook))
+- GitBook: [#16] No subject ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#15] No subject ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#13] No subject ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#12] No subject ([@seanspeaks](https://github.com/seanspeaks))
+- Bump node version ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#11] No subject (sheehan.khan@lefthook.com)
+- GitBook: [#10] No subject (sheehan.khan@lefthook.com)
+- GitBook: [#9] No subject (sheehan.khan@lefthook.com)
+- GitBook: [#8] No subject (sheehan.khan@lefthook.com)
+- GitBook: [#7] No subject (sheehan.khan@lefthook.com)
+- GitBook: [#2] No subject ([@seanspeaks](https://github.com/seanspeaks))
+- Update core README ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: [#1] Revamping Docs ([@seanspeaks](https://github.com/seanspeaks))
+- Adding Gitbook for managing /docs ([@seanspeaks](https://github.com/seanspeaks))
+- GitBook: No commit message ([@seanspeaks](https://github.com/seanspeaks))
+- Merge branch 'refactor/monorepo' ([@seanspeaks](https://github.com/seanspeaks))
+- Update LICENSE ([@seanspeaks](https://github.com/seanspeaks))
+- Initial commit ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-activecampaign@0.8.18`, `@friggframework/api-module-airwallex@0.8.17`, `@friggframework/api-module-attentive@0.8.18`, `@friggframework/api-module-clyde@0.8.19`, `@friggframework/api-module-connectwise@0.8.20`, `@friggframework/api-module-crossbeam@0.8.17`, `@friggframework/api-module-fastspring-iq@0.8.18`, `@friggframework/api-module-front@0.8.17`, `@friggframework/api-module-gorgias@0.8.17`, `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-huggg@0.8.18`, `@friggframework/api-module-ironclad@0.0.19`, `@friggframework/api-module-marketo@0.8.18`, `@friggframework/api-module-monday@0.8.17`, `@friggframework/api-module-netx@0.8.17`, `@friggframework/api-module-outreach@0.8.17`, `@friggframework/api-module-personio@0.8.18`, `@friggframework/api-module-pipedrive@0.8.17`, `@friggframework/api-module-qbo@0.8.17`, `@friggframework/api-module-rev-io@0.8.17`, `@friggframework/api-module-rollworks@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`, `@friggframework/api-module-salesloft@0.8.17`, `@friggframework/api-module-slack@0.1.7`, `@friggframework/api-module-terminus@0.8.17`, `@friggframework/api-module-yotpo@0.0.5`, `@friggframework/api-module-zoom@0.8.17`, `@friggframework/assertions@1.0.6`, `@friggframework/core@0.2.10`, `@friggframework/database@1.0.9`, `@friggframework/encrypt@1.1.5`, `@friggframework/integrations@1.0.15`, `@friggframework/logs@1.0.8`, `@friggframework/module-plugin@1.0.18`, `@friggframework/test-environment@1.1.5`
+  - Merge branch 'main' into gitbook-updates ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/assertions@1.0.6`
+  - Add lodash.get as a dependency ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-fastspring-iq@0.8.18`, `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`, `@friggframework/assertions@1.0.6`, `@friggframework/core@0.2.10`, `@friggframework/database@1.0.9`, `@friggframework/encrypt@1.1.5`, `@friggframework/errors@1.1.4`, `@friggframework/eslint-config@1.0.8`, `@friggframework/integrations@1.0.15`, `@friggframework/logs@1.0.8`, `@friggframework/module-plugin@1.0.18`, `@friggframework/prettier-config@1.0.6`, `@friggframework/test-environment@1.1.5`
+  - Refactored for more conventional naming (at least for packages) ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-activecampaign@0.8.18`, `@friggframework/api-module-airwallex@0.8.17`, `@friggframework/api-module-attentive@0.8.18`, `@friggframework/api-module-clyde@0.8.19`, `@friggframework/api-module-connectwise@0.8.20`, `@friggframework/api-module-crossbeam@0.8.17`, `@friggframework/api-module-front@0.8.17`, `@friggframework/api-module-gorgias@0.8.17`, `@friggframework/api-module-huggg@0.8.18`, `@friggframework/api-module-marketo@0.8.18`, `@friggframework/api-module-monday@0.8.17`, `@friggframework/api-module-netx@0.8.17`, `@friggframework/api-module-outreach@0.8.17`, `@friggframework/api-module-personio@0.8.18`, `@friggframework/api-module-pipedrive@0.8.17`, `@friggframework/api-module-qbo@0.8.17`, `@friggframework/api-module-rev-io@0.8.17`, `@friggframework/api-module-zoom@0.8.17`
+  - Finish initial formatting and publishing of all modules ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-rollworks@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`, `@friggframework/api-module-salesloft@0.8.17`, `@friggframework/api-module-terminus@0.8.17`
+  - Import all API modules ([@seanspeaks](https://github.com/seanspeaks))
+- `@friggframework/api-module-fastspring-iq@0.8.18`, `@friggframework/api-module-hubspot@0.8.17`, `@friggframework/api-module-salesforce@0.8.23`
+  - Degrades versions for API modules ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 7
+
+- [@cgenesoniSouthWorks](https://github.com/cgenesoniSouthWorks)
+- Gregorio Martin ([@gregoriomartin](https://github.com/gregoriomartin))
+- Scott Russell ([@queuetue](https://github.com/queuetue))
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+- sheehan.khan (sheehan.khan@lefthook.com)
+- Tom Elliott ([@tomlefthook](https://github.com/tomlefthook))
+- William P. Riley-Land ([@wprl](https://github.com/wprl))
+
+---
+
 # (Fri Dec 23 2022)
 
 #### 🐛 Bug Fix
