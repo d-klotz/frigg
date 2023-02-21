@@ -4,6 +4,7 @@
 
 ## 👩💻 Getting Started <a href="#develop" id="develop"></a>
 
+* [Should you use Frigg?](develop/should-you-use-frigg.md)
 * [Tutorials](develop/tutorials/README.md)
   * [Quick Start Tutorial](develop/tutorials/quick-start/README.md)
     * [Create Frigg App](develop/tutorials/quick-start/create-frigg-app.md)
