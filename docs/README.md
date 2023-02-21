@@ -53,6 +53,14 @@ Along with the core features, Frigg contains flexible modules that can adapt to 
 
 A Frigg Application is predominantly a backend service, with an optional frontend for configuration.
 
+## Where are we now in development?
+
+The whole purposes of open sourcing it is to garner experts from around the world, from around the different ecosystems, to pick up and try to nurture along their part of Frigg's library. At some point, the idea is that through that gained expertise, common helper functions, testing harness, scaffolding tools, code patterns, and schema validation should allow someone who hasn't ever touched the HubSpot API docs (for example) to quickly build a HubSpot App that has some HubSpot-specific features built in (CRM Extensions, Timeline Events, Workflows, Custom Schemas, etc)
+
+Another end goal is that you can "get started quickly" and then break out of any sort of abstraction or training wheels if you need to get into the weeds for whatever reason when working with third party APIs.
+
+When you combine all of this with auth "figured out for you" and normalized developer notes on how to get started, it will be like an Integration Dev Cookbook.
+
 ## Navigating the Docs
 
 These docs should be your go-to resource for all things Frigg related. In general, there are five main areas of the docs:
