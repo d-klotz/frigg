@@ -2,7 +2,7 @@
 
 * [🥳 Overview](README.md)
 
-## 👩💻 Getting Started <a href="#develop" id="develop"></a>
+## 👩💻 👩💻 Getting Started <a href="#develop" id="develop"></a>
 
 * [Should you use Frigg?](develop/should-you-use-frigg.md)
 * [Tutorials](develop/tutorials/README.md)

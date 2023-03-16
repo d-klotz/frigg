@@ -39,5 +39,4 @@ Sometime in the future, end state goal
 * Make Frigg easily deployable with docker/kubernetes if desired
 * Support multiple languages for runtime
 * Optimize the primitives so Frigg is the fastest possible service
-*
 
