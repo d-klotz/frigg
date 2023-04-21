@@ -22,6 +22,7 @@ class Options {
         this.display.description = get(params.display, 'description');
         this.display.detailsUrl = get(params.display, 'detailsUrl');
         this.display.icon = get(params.display, 'icon');
+        this.userActions = get(params, 'userActions', []);
     }
 
     get() {
@@ -47,6 +48,7 @@ class Options {
             // this is information for post-authentication config, using jsonSchema and uiSchema for display on the frontend
             // Maybe include but probably not, I like making someone make a follow-on request
             // configOptions: this.configOptions,
+            userActions: this.userActions,
         };
     }
 }
