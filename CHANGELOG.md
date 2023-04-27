@@ -1,3 +1,42 @@
+# (Thu Apr 27 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-microsoft-teams@0.0.4`
+  - add requests for app installation and removal [#152](https://github.com/friggframework/frigg/pull/152) ([@MichaelRyanWebber](https://github.com/MichaelRyanWebber))
+
+#### Authors: 1
+
+- [@MichaelRyanWebber](https://github.com/MichaelRyanWebber)
+
+---
+
+# (Wed Apr 26 2023)
+
+#### 🚀 Enhancement
+
+- `@friggframework/integrations@1.1.0`
+  - Add refreshIntegration method for config retrieval inside the integra… [#151](https://github.com/friggframework/frigg/pull/151) ([@seanspeaks](https://github.com/seanspeaks))
+
+#### Authors: 1
+
+- Sean Matthews ([@seanspeaks](https://github.com/seanspeaks))
+
+---
+
+# (Tue Apr 18 2023)
+
+#### 🐛 Bug Fix
+
+- `@friggframework/api-module-hubspot@0.8.27`
+  - add get by id method for pages and blogs [#149](https://github.com/friggframework/frigg/pull/149) ([@MichaelRyanWebber](https://github.com/MichaelRyanWebber))
+
+#### Authors: 1
+
+- [@MichaelRyanWebber](https://github.com/MichaelRyanWebber)
+
+---
+
 # (Thu Apr 13 2023)
 
 #### 🐛 Bug Fix
