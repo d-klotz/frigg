@@ -45,14 +45,26 @@ describe('Google Drive Manager Tests', () => {
             expect(res.credential_id).toBeDefined();
         });
 
-        it('Test credential retrieval and manager instantiation', async () => {
-            const newManager = await Manager.getInstance({
-                userId: manager.userId,
-                entityId: manager.entity.id,
+        describe('Test credential retrieval and manager instantiation', () => {
+            it('retrieve by entity id', async () => {
+                const newManager = await Manager.getInstance({
+                    userId: manager.userId,
+                    entityId: manager.entity.id,
+                });
+                expect(newManager).toBeDefined();
+                expect(newManager.entity).toBeDefined();
+                expect(newManager.credential).toBeDefined();
             });
-            expect(newManager).toBeDefined();
-            expect(newManager.entity).toBeDefined();
-            expect(newManager.credential).toBeDefined();
+
+            it('retrieve by credential id', async () => {
+                const newManager = await Manager.getInstance({
+                    userId: manager.userId,
+                    credentialId: manager.credential.id,
+                });
+                expect(newManager).toBeDefined();
+                expect(newManager.credential).toBeDefined();
+            });
+
         });
     });
 });

@@ -32,13 +32,13 @@ class Manager extends ModuleManager {
 
 
         if (params.entityId) {
-            instance.entity = await Entity.findById(params.entityId);
-            instance.credential = await Credential.findById(
+            instance.entity = await this.Entity.findById(params.entityId);
+            instance.credential = await this.Credential.findById(
                 instance.entity.credential
             );
             apiParams.access_token = instance.credential.access_token;
         } else if (params.credentialId) {
-            instance.credential = await Credential.findById(
+            instance.credential = await this.Credential.findById(
                 params.credentialId
             );
             apiParams.access_token = instance.credential.access_token;
