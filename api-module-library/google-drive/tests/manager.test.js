@@ -1,17 +1,22 @@
 require('dotenv').config();
-const Manager = require('../manager');
 const mongoose = require('mongoose');
-const Authenticator = require("@friggframework/test-environment/Authenticator");
+const Manager = require('../manager');
+const { connectToDatabase } = require('@friggframework/database/mongo');
+const Authenticator = require('@friggframework/test-environment/Authenticator');
 
 describe('Google Drive Manager Tests', () => {
     let manager, authUrl;
     jest.setTimeout(100000);
-    
-    beforeAll(async () => {
 
-        await mongoose.connect(process.env.MONGO_URI);
+    beforeAll(async () => {
+        const conn = mongoose.connection;
+        console.log(process.env.MONGO_URI);
         manager = await Manager.getInstance({
             userId: new mongoose.Types.ObjectId(),
+        });
+        conn.modelNames().map(async (model) => {
+            console.log(model);
+            await conn.models[model].createIndexes();
         });
     });
 
@@ -27,11 +32,19 @@ describe('Google Drive Manager Tests', () => {
             expect(requirements).toBeDefined();
             expect(requirements.type).toEqual('oauth2');
             authUrl = requirements.url;
-
         });
     });
 
     describe('processAuthorizationCallback() test', () => {
+        beforeAll(async () => {
+            mongoose.set('strictQuery', false);
+            await connectToDatabase();
+
+            console.log(process.env.MONGO_URI);
+            manager = await Manager.getInstance({
+                userId: new mongoose.Types.ObjectId(),
+            });
+        });
         it('should return an entity_id, credential_id, and type for successful auth', async () => {
             const response = await Authenticator.oauth2(authUrl);
             const baseArr = response.base.split('/');
