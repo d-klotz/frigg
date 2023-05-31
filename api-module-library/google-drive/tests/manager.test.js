@@ -5,8 +5,10 @@ const Authenticator = require("@friggframework/test-environment/Authenticator");
 
 describe('Google Drive Manager Tests', () => {
     let manager, authUrl;
-
+    jest.setTimeout(100000);
+    
     beforeAll(async () => {
+
         await mongoose.connect(process.env.MONGO_URI);
         manager = await Manager.getInstance({
             userId: new mongoose.Types.ObjectId(),
@@ -25,6 +27,7 @@ describe('Google Drive Manager Tests', () => {
             expect(requirements).toBeDefined();
             expect(requirements.type).toEqual('oauth2');
             authUrl = requirements.url;
+
         });
     });
 

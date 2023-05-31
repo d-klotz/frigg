@@ -15,8 +15,11 @@ describe('Google Drive API tests', () => {
     const api = new Api(apiParams);
 
     beforeAll(async () => {
+        jest.setTimeout(300000);
+
         api.setState(JSON.stringify({ id: 1 }));
         const url = await api.getAuthorizationUri();
+        console.log('url', url);
         const response = await Authenticator.oauth2(url);
         const baseArr = response.base.split('/');
         response.entityType = baseArr[baseArr.length - 1];
