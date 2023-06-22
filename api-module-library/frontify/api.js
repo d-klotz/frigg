@@ -3,6 +3,30 @@ const { OAuth2Requester } = require('@friggframework/module-plugin');
 const querystring = require('querystring');
 
 class Api extends OAuth2Requester {
+    assetQl = `assets {
+                 items {
+                   id
+                   title
+                   description
+                   __typename
+                   ... on Audio {
+                     previewUrl(width:100, height:100)
+                   }
+                   ... on Document {
+                     previewUrl(width:100, height:100)
+                   }
+                   ... on File {
+                     previewUrl
+                   }
+                   ... on Image {
+                     previewUrl(width:100, height:100)
+                   }
+                   ... on Video {
+                     previewUrl(width:100, height:100)
+                   }
+                 }
+               }`;
+
     constructor(params) {
         super(params);
         this.domain = get(params, 'domain', null);
@@ -79,7 +103,7 @@ class Api extends OAuth2Requester {
             'description',
             'downloadUrl',
             'filename',
-            'previewUrl',
+            'previewUrl(width:100, height:100)',
             'size',
         ];
 
@@ -117,11 +141,6 @@ class Api extends OAuth2Requester {
                           duration
                           bitrate
                         }
-                        ... on EmbeddedContent {
-                          description
-                          previewUrl
-                          status
-                        }
                       }
                     }`;
 
@@ -139,7 +158,6 @@ class Api extends OAuth2Requester {
                 'File',
                 'Image',
                 'Video',
-                'EmbeddedContent'
             ]
         };
     }
@@ -197,14 +215,7 @@ class Api extends OAuth2Requester {
     async listProjectAssets(query) {
         const ql = `query ProjectAssets {
                       workspaceProject(id: "${query.projectId}") {
-                        assets {
-                          items {
-                            id
-                            title
-                            description
-                            __typename
-                          }
-                        }
+                        ${this.assetQl}
                       }
                     }`;
 
@@ -240,14 +251,7 @@ class Api extends OAuth2Requester {
     async listLibraryAssets(query) {
         const ql = `query LibraryAssets {
                       library(id: "${query.libraryId}") {
-                        assets {
-                          items {
-                            id
-                            title
-                            description
-                            __typename
-                          }
-                        }
+                        ${this.assetQl}
                       }
                     }`;
 

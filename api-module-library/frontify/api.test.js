@@ -221,7 +221,7 @@ describe(`${Config.label} API Tests`, () => {
                 'description',
                 'downloadUrl',
                 'filename',
-                'previewUrl',
+                'previewUrl(width:100, height:100)',
                 'size',
             ];
 
@@ -258,11 +258,6 @@ describe(`${Config.label} API Tests`, () => {
                               ${dimensionProps.join(' ')}
                               duration
                               bitrate
-                            }
-                            ... on EmbeddedContent {
-                              description
-                              previewUrl
-                              status
                             }
                           }
                         }`;
@@ -335,8 +330,7 @@ describe(`${Config.label} API Tests`, () => {
                             'Document',
                             'File',
                             'Image',
-                            'Video',
-                            'EmbeddedContent'
+                            'Video'
                         ]
                     });
                 });
@@ -560,6 +554,21 @@ describe(`${Config.label} API Tests`, () => {
                                  title
                                  description
                                  __typename
+                                 ... on Audio {
+                                   previewUrl(width:100, height:100)
+                                 }
+                                 ... on Document {
+                                   previewUrl(width:100, height:100)
+                                 }
+                                 ... on File {
+                                   previewUrl
+                                 }
+                                 ... on Image {
+                                   previewUrl(width:100, height:100)
+                                 }
+                                 ... on Video {
+                                   previewUrl(width:100, height:100)
+                                 }
                                }
                              }
                            }
@@ -709,6 +718,21 @@ describe(`${Config.label} API Tests`, () => {
                                  title
                                  description
                                  __typename
+                                 ... on Audio {
+                                   previewUrl(width:100, height:100)
+                                 }
+                                 ... on Document {
+                                   previewUrl(width:100, height:100)
+                                 }
+                                 ... on File {
+                                   previewUrl
+                                 }
+                                 ... on Image {
+                                   previewUrl(width:100, height:100)
+                                 }
+                                 ... on Video {
+                                   previewUrl(width:100, height:100)
+                                 }
                                }
                              }
                            }
