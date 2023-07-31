@@ -32,7 +32,7 @@ class Api extends OAuth2Requester {
             getFile: ({ driveId, fileId }) =>
                 `/drives/${driveId}/items/${fileId}?$expand=listItem`,
             search: ({ driveId, query }) =>
-                `/drives/${driveId}/root/search(q='${query}')?top=20&$select=id,image,name,file,parentReference,size,lastModifiedDateTime,@microsoft.graph.downloadUrl&$filter=`,
+                `/drives/${driveId}/root/search(q='${query}')?top=20&$select=id,image,name,file,parentReference,size,lastModifiedDateTime,@microsoft.graph.downloadUrl&$expand=thumbnails`,
             uploadFile: ({ driveId, childId, filename }) =>
                 `/drives/${driveId}/items/${childId}:/${filename}:/content`,
             createUploadSession: ({ driveId, childId,filename }) =>
