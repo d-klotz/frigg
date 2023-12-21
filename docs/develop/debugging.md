@@ -18,7 +18,7 @@ This is happening because your database is not configured properly.
 
 Check your configuration file here: `my-create-frigg-app/backend/src/configs/dev.json`
 
-In this file, you need to set up mongo properly as mentioned in the [Configuration](../api-module-library/module-list/rollworks/configuration.md) section of these docs.
+In this file, you need to set up mongo properly as mentioned in the [Configuration](../api-modules/module-list/rollworks/configuration.md) section of these docs.
 
 You can debug to see if this is working by running these commands in terminal.
 

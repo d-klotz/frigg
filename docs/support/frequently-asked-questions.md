@@ -13,7 +13,7 @@ This FAQ page is divided into three sections: General, Technical/Product and Non
 Frigg is powering +10 integrations (total) for these early adopters:\
 
 
-### ****[**Crossbeam**](https://partnercloud.crossbeam.com/)****
+### [**Crossbeam**](https://partnercloud.crossbeam.com/)
 
 * **monday.com**
 * **ActiveCampaign**
@@ -23,17 +23,17 @@ Frigg is powering +10 integrations (total) for these early adopters:\
 * **Terminus**
 * **Outreach.io**
 
-### ****[**Clyde**](https://partners.joinclyde.com/tech-partners/)****
+### [**Clyde**](https://partners.joinclyde.com/tech-partners/)
 
 * **Gorgias**
 * **Attentive**
 
-### ****[**FastSpring Interactive Quotes**](https://fastspring.com/docs/interactive-quotes-overview/)
+### [**FastSpring Interactive Quotes**](https://fastspring.com/docs/interactive-quotes-overview/)
 
 * **SalesForce**
 * **HubSpot**
 
-****
+
 
 </details>
 
@@ -65,7 +65,7 @@ Yes. Frigg provides developers with an opinionated, ready-to-use framework, as w
 
 Frigg was first created by [Left Hook](https://lefthook.com). It is now used by several B2B SaaS companies to power more than 20 different direct/native integrations.
 
-An open source community of contributors and supporters is now forming around the Frigg Framework project. Please [join us](support.md)!
+An open source community of contributors and supporters is now forming around the Frigg Framework project. Please [join us](support/)!
 
 </details>
 
