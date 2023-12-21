@@ -4,12 +4,9 @@ const { OAuth2Requester } = require('@friggframework/module-plugin');
 class Api extends OAuth2Requester {
     constructor(params) {
         super(params);
+        // The majority of the properties for OAuth are default loaded by OAuth2Requester.
+        // This includes the `client_id`, `client_secret`, `scopes`, and `redirect_uri`.
         this.baseUrl = 'https://api.hubapi.com';
-
-        this.client_id = process.env.HUBSPOT_CLIENT_ID;
-        this.client_secret = process.env.HUBSPOT_CLIENT_SECRET;
-        this.redirect_uri = `${process.env.REDIRECT_URI}/hubspot`;
-        this.scopes = process.env.HUBSPOT_SCOPES;
 
         this.URLs = {
             authorization: '/oauth/authorize',
@@ -46,27 +43,25 @@ class Api extends OAuth2Requester {
                 `/crm/v3/objects/${objectType}/batch/create`,
             bulkArchiveCustomObjects: (objectType) =>
                 `/crm/v3/objects/${objectType}/batch/archive`,
+            landingPages: '/cms/v3/pages/landing-pages',
+            sitePages: '/cms/v3/pages/site-pages',
+            blogPosts: '/cms/v3/blogs/posts',
+            landingPageById: (landingPageId) => `/cms/v3/pages/landing-pages/${landingPageId}`,
+            sitePageById: (sitePageId) => `/cms/v3/pages/site-pages/${sitePageId}`,
+            blogPostById: (blogPostId) => `/cms/v3/blogs/posts/${blogPostId}`,
+            emailTemplates: '/content/api/v2/templates',
+            emailTemplateById: (templateId) => `/content/api/v2/templates/${templateId}`,
+            
         };
 
         this.authorizationUri = encodeURI(
-            `https://app.hubspot.com/oauth/authorize?client_id=${this.client_id}&redirect_uri=${this.redirect_uri}&scope=${this.scopes}&state=app:HUBSPOT`
+            `https://app.hubspot.com/oauth/authorize?client_id=${this.client_id}&redirect_uri=${this.redirect_uri}&scope=${this.scope}&state=${this.state}`
         );
         this.tokenUri = 'https://api.hubapi.com/oauth/v1/token';
 
         this.access_token = get(params, 'access_token', null);
         this.refresh_token = get(params, 'refresh_token', null);
-        this.api_key = get(params, 'api_key', null);
     }
-
-    async setAccessToken(accessToken) {
-        this.access_token = accessToken;
-    }
-
-    async refreshRetry(callback) {
-        await this.refreshAccessToken();
-        return callback();
-    }
-
     async getAuthUri() {
         return this.authorizationUri;
     }
@@ -661,6 +656,225 @@ class Api extends OAuth2Requester {
             extraData: data.extraData,
         };
         return this._post(this.URLs.createTimelineEvent, body);
+    }
+
+    // **************************   Pages   *****************************
+
+    async getLandingPages(query=''){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.landingPages}`,
+        };
+        if (query !== '') {
+            options.url = `${options.url}?${query}`
+        }
+        return this._get(options);
+    }
+
+    async getLandingPage(id){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.landingPageById(id)}`,
+        };
+        return this._get(options);
+    }
+
+    async updateLandingPage(objId, body, isDraft=false){
+        const draft = isDraft ? '/draft' : ''
+        const options = {
+            url: `${this.baseUrl}${this.URLs.landingPageById(objId)}${draft}`,
+            body,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._patch(options);
+    }
+
+    async pushLandingPageDraftToLive(objId){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.landingPageById(objId)}/draft/push-live`,
+        };
+        return this._post(options);
+    }
+
+    async publishLandingPage(objId, publishDate) {
+        const options = {
+            url: `${this.baseUrl}${this.URLs.landingPages}/schedule`,
+            body: {
+                id: objId,
+                publishDate
+            },
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._post(options);
+    }
+
+    async getSitePages(query=''){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.sitePages}`,
+        };
+        if (query !== '') {
+            options.url = `${options.url}?${query}`
+        }
+        return this._get(options);
+    }
+
+    async getSitePage(id){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.sitePageById(id)}`,
+        };
+        return this._get(options);
+    }
+
+
+    async updateSitePage(objId, body, isDraft=false){
+        const draft = isDraft ? '/draft' : ''
+        const options = {
+            url: `${this.baseUrl}${this.URLs.sitePageById(objId)}${draft}`,
+            body: body,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._patch(options);
+    }
+
+    async pushSitePageDraftToLive(objId){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.sitePageById(objId)}/draft/push-live`,
+        };
+        return this._post(options);
+    }
+
+    async publishSitePage(objId, publishDate) {
+        const options = {
+            url: `${this.baseUrl}${this.URLs.sitePages}/schedule`,
+            body: {
+                id: objId,
+                publishDate
+            },
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._post(options);
+    }
+
+    // **************************   Blogs   *****************************
+
+    async getBlogPosts(query=''){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.blogPosts}`,
+        };
+        if (query !== '') {
+            options.url = `${options.url}?${query}`
+        }
+        return this._get(options);
+    }
+
+    async getBlogPost(id){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.blogPostById(id)}`,
+        };
+        return this._get(options);
+    }
+
+    async updateBlogPost(objId, body, isDraft=false) {
+        const draft = isDraft ? '/draft' : ''
+        const options = {
+            url: `${this.baseUrl}${this.URLs.blogPostById(objId)}${draft}`,
+            body: body,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._patch(options);
+    }
+
+    async pushBlogPostDraftToLive(objId){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.blogPostById(objId)}/draft/push-live`,
+        };
+        return this._post(options);
+    }
+
+    async publishBlogPost(objId, publishDate) {
+        const options = {
+            url: `${this.baseUrl}${this.URLs.blogPosts}/schedule`,
+            body: {
+                id: objId,
+                publishDate
+            },
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._post(options);
+    }
+
+    // ***********************   Email Templates   **************************
+
+    async getEmailTemplates(query=''){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.emailTemplates}`,
+        };
+        if (query !== '') {
+            options.url = `${options.url}?${query}`
+        }
+        return this._get(options);
+    }
+
+    async getEmailTemplate(id){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.emailTemplateById(id)}`,
+        };
+        return this._get(options);
+    }
+
+    async updateEmailTemplate(objId, body) {
+        const options = {
+            url: `${this.baseUrl}${this.URLs.emailTemplateById(objId)}`,
+            body: body,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._put(options);
+    }
+
+    async createEmailTemplate(body) {
+        const options = {
+            url: `${this.baseUrl}${this.URLs.emailTemplates}`,
+            body: body,
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+
+            }
+        };
+        return this._post(options);
+    }
+
+    async deleteEmailTemplate(id){
+        const options = {
+            url: `${this.baseUrl}${this.URLs.emailTemplateById(id)}`,
+        };
+        return this._delete(options);
     }
 
     // **************************   Other/All   **********************************

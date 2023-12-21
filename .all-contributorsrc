@@ -202,6 +202,93 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "MichaelRyanWebber",
+      "name": "MichaelRyanWebber",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7769437?v=4",
+      "profile": "https://github.com/MichaelRyanWebber",
+      "contributions": [
+        "doc",
+        "infra",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "debbie-yu",
+      "name": "debbie-yu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89419828?v=4",
+      "profile": "https://github.com/debbie-yu",
+      "contributions": [
+        "doc",
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "roboli",
+      "name": "Roberto Oliveros",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6392110?v=4",
+      "profile": "https://www.linkedin.com/in/roboli",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "leofmds",
+      "name": "Leonardo Ferreira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7059835?v=4",
+      "profile": "https://github.com/leofmds",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "Fibii",
+      "name": "Charaf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38106876?v=4",
+      "profile": "https://github.com/Fibii",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "msalvatti",
+      "name": "Maximiliano Salvatti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40447063?v=4",
+      "profile": "https://github.com/msalvatti",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "msalvatti-ecotrak",
+      "name": "Maximiliano Salvatti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132104869?v=4",
+      "profile": "https://github.com/msalvatti-ecotrak",
+      "contributions": [
+        "doc",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "Jo-lefthook",
+      "name": "Jo-lefthook",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139414886?v=4",
+      "profile": "https://github.com/Jo-lefthook",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
